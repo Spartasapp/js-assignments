@@ -30,7 +30,19 @@
  *
  */
 function getFizzBuzz(num) {
-    throw new Error('Not implemented');
+    if(num%3==0 && num%5==0){
+        return 'FizzBuzz';
+    }
+    else if(num%3==0 && num%5!=0){
+        return 'Fizz';
+    }
+    else if(num%3!=0 && num%5==0){
+        return 'Buzz';
+    }
+    else {
+        return num;
+    }
+    
 }
 
 
@@ -46,7 +58,7 @@ function getFizzBuzz(num) {
  *   10 => 3628800
  */
 function getFactorial(n) {
-    throw new Error('Not implemented');
+    return (n != 1) ? n * getFactorial(n - 1) : 1;
 }
 
 
@@ -82,6 +94,12 @@ function getSumBetweenNumbers(n1, n2) {
  *   10,10,10 =>  true
  */
 function isTriangle(a,b,c) {
+   /* if(c*c==a*a+b*b || a==b==c){
+        return true;
+    }
+    else {
+        return false;
+    }*/
     throw new Error('Not implemented');
 }
 
@@ -226,7 +244,12 @@ function reverseString(str) {
  *   34143 => 34143
  */
 function reverseInteger(num) {
-    throw new Error('Not implemented');
+    var x = num;
+    var y = x.toString();
+    var z = y.split("").reverse().join("");
+    var w = Number(z);
+    return w;
+   
 }
 
 
@@ -270,7 +293,21 @@ function isCreditCardNumber(ccn) {
  *   165536 (1+6+5+5+3+6 = 26,  2+6 = 8) => 8
  */
 function getDigitalRoot(num) {
-    throw new Error('Not implemented');
+    var x = num;
+  var y = x.toString();
+  var z = y.split("");
+  var t = z.reduce(function(accum,current){
+      return +accum+(+current);
+  });
+  var a = t.toString();
+  var b = a.split('');
+  var c = b.reduce(function(accum,current){
+      return +accum+(+current);
+  });
+
+  
+  return c;
+    //throw new Error('Not implemented');
 }
 
 
@@ -296,6 +333,8 @@ function getDigitalRoot(num) {
  *   '{[(<{[]}>)]}' = true 
  */
 function isBracketsBalanced(str) {
+   
+    
     throw new Error('Not implemented');
 }
 
@@ -356,6 +395,9 @@ function timespanToHumanString(startDate, endDate) {
  *    365, 10 => '365'
  */
 function toNaryString(num, n) {
+    /*var t = num.toString();
+    var parsed = parseInt(t, n);
+    return parsed;*/
     throw new Error('Not implemented');
 }
 
